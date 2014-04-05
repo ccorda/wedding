@@ -12,6 +12,9 @@
     "start": "node index.js"
   },
   "devDependencies": {
+  },
+  "dependencies": {
+    "express": "~3.5.1",
     "gulp": "~3.6.0",
     "gulp-util": "~2.2.14",
     "gulp-sass": "~0.7.1",
@@ -24,9 +27,5 @@
     "gulp-clean": "~0.2.4",
     "gulp-inject": "~0.4.1",
     "gulp-swig": "~0.5.1"
-  },
-  "dependencies": {
-    "send": "~0.2.0",
-    "express": "~3.5.1"
   }
 }
