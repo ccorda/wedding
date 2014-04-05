@@ -6,6 +6,11 @@
   "repository": "",
   "author": "",
   "license": "BSD",
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "gulp",
+    "start": "node index.js"
+  },
   "devDependencies": {
     "gulp": "~3.6.0",
     "gulp-util": "~2.2.14",
