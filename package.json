@@ -9,7 +9,7 @@
   "engine": "node 0.10.x",
   "scripts": {
     "postinstall": "npm run build",
-    "build": "gulp",
+    "build": "gulp build",
     "start": "node index.js"
   },
   "dependencies": {

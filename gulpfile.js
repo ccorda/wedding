@@ -124,3 +124,9 @@ gulp.task('default', [
     'templates',
     'watch'
 ]);
+
+gulp.task('build', [
+    'styles',
+    'images',
+    'templates'
+]);
