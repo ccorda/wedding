@@ -9,6 +9,11 @@ var rev          = require("gulp-rev");
 var clean        = require("gulp-clean");
 var inject       = require("gulp-inject");
 var swig         = require('gulp-swig');
+var marked       = require('swig-marked');
+var livereload   = require('gulp-livereload');
+
+// Load plugins
+var $ = require('gulp-load-plugins')();
 
 var config = {
     timber: 'public',
@@ -21,17 +26,24 @@ var config = {
 var opts = {
     data: {
         headline: "Welcome"
+    },
+    defaults: {
+        cache: false
+    },
+    setup: function(swig) {
+        marked.useTag(swig, 'markdown');
     }
 };
 
 gulp.task('clean', function() {
-    gulp.src( config.dist, {read: false})
-        .pipe(clean());
+    return gulp.src( config.dist, {read: false})
+        .pipe($.clean());
 });
 
 gulp.task('styles', function() {
     return gulp.src( config.assets + '/scss/**/*.scss' )
         .pipe(sass({
+            errLogToConsole: true,
             style: 'expanded',
             sourceComments: 'map'
         }))
@@ -45,18 +57,28 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
     return gulp.src( config.timber + '/views/layout.twig' )
-    .pipe(usemin({
-        assetsDir: 'site-wp/wordpress',
-        js: [ uglify() ]
-    }))
-    .pipe(gulp.dest( config.dist ))
+        .pipe(usemin({
+            assetsDir: 'site-wp/wordpress',
+            js: [ uglify() ]
+        }))
+        .pipe(gulp.dest( config.dist ));
 });
 
-gulp.task('images', function() {
-    return gulp.src( config.assets + '/img/**' )
-    .pipe(gulp.dest( config.dist + '/assets/img' ))
+// Images
+gulp.task('images', function () {
+    return gulp.src( config.assets + '/img/**/*')
+        .pipe($.cache($.imagemin({
+            optimizationLevel: 3,
+            progressive: true,
+            interlaced: true
+        })))
+        .pipe(gulp.dest( config.dist + '/img'))
+        .pipe($.size());
 });
 
+
+
+// Static Site
 gulp.task('templates', function() {
     gulp.src( config.templates + '/*.swig')
     .pipe(swig(opts))
@@ -64,15 +86,41 @@ gulp.task('templates', function() {
     .pipe(gulp.dest( config.dist ))
 });
 
+gulp.task('connectDev', function () {
+    $.connect.server({
+        root: [config.dev],
+        port: 9001,
+        livereload: true
+    });
+});
+
+gulp.task('connectDist', function () {
+    $.connect.server({
+        root: [config.dist],
+        port: 9000,
+        livereload: true
+    });
+});
+
+
 gulp.task('watch', function() {
+    gulp.watch( config.dist + '/**/*', function (event) {
+        return gulp.src(event.path)
+            .pipe($.connect.reload());
+    });
     gulp.watch( config.assets + '/**/*.js', ['scripts']);
     gulp.watch( config.assets + '/scss/**/*.scss', ['styles']);
+    gulp.watch( config.assets + '/img/**/*', ['images']);
+    gulp.watch( config.templates + '/**/*.swig', ['templates']);
 });
 
 // define tasks
 gulp.task('default', [
+    'connectDist',
     'clean',
     'styles',
+    'images',
     // 'scripts'
-    'templates'
+    'templates',
+    'watch'
 ]);

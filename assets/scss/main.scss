@@ -1,7 +1,81 @@
-body {
-    background: #ccc;
+@import "foundation/functions";
 
-    h1 {
-        font: 12px lime;
+// Colors
+
+$color-papaya: #F17269;
+$color-seamist: #AAD9D6;
+
+// Typography
+
+$sans: "omnes-pro", sans-serif;
+$serif: "jubilat", serif;
+
+$body-font-family: $sans;
+$header-font-weight: normal;
+$header-font-family: $serif;
+$h2-font-size: rem-calc(54);
+
+
+// typekit async FOUT prevention
+
+h1, h2, h3, p {
+    .wf-loading & {
+        visibility: hidden;
+    }
+    .wf-active & {
+      visibility: visible;
+    }
+    .wf-inactive & {
+      visibility: visible;
+    }
+}
+
+@import "foundation";
+
+section {
+    > .row {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+section.papaya {
+    background: $color-papaya;
+    color: #fff;
+}
+
+section.seamist {
+    background: $color-seamist;
+    color: #fff;
+}
+
+section.intro {
+    h2 {
+        color: $color-papaya;
+    }
+
+    p {
+        margin-top: 1em;
+        margin-bottom: .7em;
+        color: $color-seamist;
+        font-size: 1.3em;
+
+        &.city {
+            margin-top: 0;
+        }
+    }
+
+    h3 {
+        margin-bottom: 0;
+        color: $color-papaya;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: $sans;
     }
 }

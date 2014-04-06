@@ -10,34 +10,16 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- modernizr -->
 
-    <script type="text/javascript" src="//use.typekit.net/wpa7qcf.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <style>
-    body {
-        font-family: "omnes-pro",sans-serif;
-        color: #CEE6E1;
-    }
-    .intro {
-        font-weight: 300;
-    }
-    .names {
-        font-family: "dapifer", serif;
-        /*font-variant: small-caps;*/
-        font-style: italic;
-        text-align: center;
-
-        font-size: 128px;
-        color: #F99183;
-    }
-    .names span {
-        font-style: italic;
-        font-size: 72px;
-    }
-    .i {
-        font-style: italic;
-    }
-
-    </style>
+    <!-- ssync Typekit, need to use css to hide FOUT -->
+    <script type="text/javascript">
+      (function(d) {
+        var config = {
+          kitId: 'wpa7qcf',
+          scriptTimeout: 3000
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
 
 </head>
 
