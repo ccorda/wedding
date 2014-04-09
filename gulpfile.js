@@ -43,16 +43,18 @@ gulp.task('clean', function() {
 gulp.task('styles', function() {
     return gulp.src( config.assets + '/scss/**/*.scss' )
         .pipe(sass({
-            errLogToConsole: true,
             style: 'expanded',
-            sourceComments: 'map'
+            sourceComments: 'map',
+            onError: function(err){
+                $.notify().write(err);
+            }
         }))
         .pipe(autoprefixer('last 2 versions'))
         .pipe(gulp.dest( config.dev + '/css' ))
         .pipe(minifycss({
             keepSpecialComments: 0
         }))
-        .pipe(gulp.dest( config.dist + '/css'));
+        .pipe(gulp.dest( config.dist + '/css'))
 });
 
 gulp.task('scripts', function() {

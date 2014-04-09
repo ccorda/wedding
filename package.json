@@ -33,5 +33,8 @@
     "gulp-cache": "~0.1.3",
     "gulp-imagemin": "~0.2.0",
     "gulp-size": "~0.3.0"
+  },
+  "devDependencies": {
+    "gulp-notify": "~1.2.5"
   }
 }
