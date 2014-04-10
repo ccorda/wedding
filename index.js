@@ -1,7 +1,9 @@
-require('newrelic');
-
 var express = require('express');
 var app = express();
+
+app.configure('production', function(){
+    require('newrelic');
+});
 
 app.get('/registry', function(req, res){
   res.redirect('http://www.myregistry.com/Visitors/GiftList.aspx?sid=75EAA302-43AF-4E3A-B6F0-4D8395AC9F23');

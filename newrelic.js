@@ -1,4 +1,4 @@
-var newrelic_key = process.env.newrelic || '';
+var newrelic_key   = process.env.newrelic || '';
 
 /**
  * New Relic agent configuration.
