@@ -39,5 +39,7 @@
     {% endblock %}
 
     <!-- footer js -->
+
+    <!-- new relic heartbeat -->
 </body>
 </html>
