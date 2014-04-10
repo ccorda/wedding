@@ -2,14 +2,16 @@
 
 // Colors
 
-$color-papaya: #F17269;
-$color-seamist: #AAD9D6;
+$papaya: #F17269;
+$seamist: #AAD9D6;
 
 // Typography
 
 $sans: "omnes-pro", sans-serif;
 $serif: "jubilat", serif;
 
+$rem-base: 16px;
+$base-font-size: 18px;
 $body-font-family: $sans;
 $header-font-weight: normal;
 $header-font-family: $serif;
@@ -43,27 +45,43 @@ section {
         text-align: center;
         font-weight: 600;
     }
+
+    h3 {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: $sans;
+    }
 }
 
+section.white {
+    h2 {
+        color: $seamist;
+    }
+}
 section.papaya {
-    background: $color-papaya;
+    background: $papaya;
     color: #fff;
+
+    h3 {
+        color: #fff;
+    }
 }
 
 section.seamist {
-    background: $color-seamist;
+    background: $seamist;
     color: #fff;
 }
 
 section.intro {
     h2 {
-        color: $color-papaya;
+        color: $papaya;
     }
 
     p {
         margin-top: 1em;
         margin-bottom: .7em;
-        color: $color-seamist;
+        color: $seamist;
         font-size: 1.3em;
 
         &.city {
@@ -73,7 +91,7 @@ section.intro {
 
     h3 {
         margin-bottom: 0;
-        color: $color-papaya;
+        color: $papaya;
         text-transform: uppercase;
         font-weight: 600;
         font-family: $sans;
