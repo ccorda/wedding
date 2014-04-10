@@ -51,7 +51,7 @@ We met in 2007, and despite Cameron’s UCLA roots, he gave Caitlin cardinal and
                         <li>Jamie Defazio</li>
                         <li>Megan Condrey</li>
                         <li>Nicole Martin</li>
-                        <li>Nicole Stevenson</li>
+                        <li>Nichole Stevenson</li>
                     </ul>
                 </div>
                 <div class="columns medium-6 text-center">
@@ -87,7 +87,7 @@ We’re excited to welcome guests to the Island Vista Resort. This hotel is righ
 **The Myrtle Beach Boardwalk**<br>
 Arcade games, a ferris wheel and a nice stroll on the beach! For any Jimmy Buffett lovers out there (you know who you are) there’s a Landshark bar and grill you may want to check out - but if you want a local’s tip, head to Moe Moon’s just across the street for the best wings in town!
 
-**The Chesapeake House**<br>Open for over 40 years, this restaurant is owned and operated by Caitlin’s family and is fried seafood at it’s finest. If you’ve got a free evening and want some great food and a place where southern hospitality meets delicious seafood, the ‘peake (as we like to call it) is a can’t miss! Be sure to call ahead - it’s a popular spot!
+**The Chesapeake House**<br>Open for over 40 years, this restaurant is owned and operated by Caitlin’s family and is fried seafood at its finest. If you’ve got a free evening and want some great food and a place where southern hospitality meets delicious seafood, the ‘peake (as we like to call it) is a can’t miss! Be sure to call ahead - it’s a popular spot!
 
 **Head to the beach!**<br> Whether it’s at the Island Vista or somewhere else in the area, the South Carolina Grand Strand is 60+ miles of uninterrupted coastline. Go for a long walk, hang out in the water or catch some sun!
 
