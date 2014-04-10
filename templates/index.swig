@@ -19,17 +19,21 @@
     <div class="row">
         <div class="columns">
             <div class="row">
-                <h2>The Couple</h2>
-                <div class="columns medium-8">
+                <div class="columns medium-8 medium-centered">
+                    <h2>The Couple</h2>
+                    <div class="row">
+                        <div class="columns medium-8">
 {% markdown %}
 We are so thrilled to welcome our friends and family to Caitlin’s hometown of Myrtle Beach, South Carolina. This location holds a special place in our hearts and we’re excited and ready to share this special time with each and every one of you.
 
 We met in 2007, and despite Cameron’s UCLA roots, he gave Caitlin cardinal and gold daisies on their first date (she went to USC - the SoCal version!). Our relationship grew from that moment and led to our engagement in June of 2013. We can’t wait to start our new chapter together and for you to be a part of the celebration!
 
 {% endmarkdown %}
-                </div>
-                <div class="columns medium-4 small-text-center">
-                    <img src="/img/photo.jpg">
+                        </div>
+                        <div class="columns medium-4 small-text-center">
+                            <img src="/img/photo.jpg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,7 +42,7 @@ We met in 2007, and despite Cameron’s UCLA roots, he gave Caitlin cardinal and
 
 <section class="papaya">
     <div class="row">
-        <div class="columns">
+        <div class="columns medium-10 medium-centered">
             <h2>The Wedding Party</h2>
             <div class="row">
                 <div class="columns medium-6 text-center">
