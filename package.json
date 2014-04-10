@@ -6,7 +6,9 @@
   "repository": "",
   "author": "",
   "license": "BSD",
-  "engine": "node 0.10.x",
+  "engines": {
+    "node": "~0.10"
+  },
   "scripts": {
     "postinstall": "npm run build",
     "build": "gulp build",
