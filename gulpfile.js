@@ -13,7 +13,7 @@ var marked       = require('swig-marked');
 var livereload   = require('gulp-livereload');
 
 // Load plugins
-//var $ = require('gulp-load-plugins')();
+var $ = require('gulp-load-plugins')();
 
 var config = {
     timber: 'public',
